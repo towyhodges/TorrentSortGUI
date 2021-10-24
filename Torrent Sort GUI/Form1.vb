@@ -393,4 +393,20 @@ Public Class Form1
 
     End Sub
 
+    Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
+
+        Dim HelpString As String = "How to use Torrent GUI:" & vbCrLf & vbCrLf
+        HelpString = HelpString & "Source Folder: This folder is where your torrents download to." & vbCrLf & vbCrLf
+        HelpString = HelpString & "NOTE: A file that is in use (seeding) will not be movable.  Close your torrent engine before importing." & vbCrLf & vbCrLf
+        HelpString = HelpString & "Sort Target: This is where the imported files will end up" & vbCrLf & vbCrLf
+        HelpString = HelpString & "TV Sort Folder: This is where sorted TV Shows will be moved to." & vbCrLf & vbCrLf
+        HelpString = HelpString & "Steps:" & vbCrLf
+        HelpString = HelpString & "1) Set up Settings" & vbCrLf
+        HelpString = HelpString & "2) Click Import Files to Find all files with matching extensions" & vbCrLf
+        HelpString = HelpString & "3) Click Strip Files to remove designated tags" & vbCrLf
+        HelpString = HelpString & "4) Click Sort Shows to move matching shows into the TV directory" & vbCrLf
+        HelpString = HelpString & "5) Click Clean Dir to delete leftover files in torrent folder matching the designated extensions" & vbCrLf
+
+        MsgBox(HelpString)
+    End Sub
 End Class

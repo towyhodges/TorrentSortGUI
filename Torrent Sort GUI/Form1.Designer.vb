@@ -54,6 +54,7 @@ Partial Class Form1
         Me.FolderBrowserDialogMain = New System.Windows.Forms.FolderBrowserDialog()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.ButtonHelp = New System.Windows.Forms.Button()
         Me.TabControlMain.SuspendLayout()
         Me.TabPageSort.SuspendLayout()
         Me.TabPageSettings.SuspendLayout()
@@ -228,6 +229,7 @@ Partial Class Form1
         '
         'TabPageSettings
         '
+        Me.TabPageSettings.Controls.Add(Me.ButtonHelp)
         Me.TabPageSettings.Controls.Add(Me.CheckBoxSaveExit)
         Me.TabPageSettings.Controls.Add(Me.ButtonBrowseTV)
         Me.TabPageSettings.Controls.Add(Me.ButtonBrowseTarget)
@@ -353,6 +355,15 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 4
         Me.PictureBox2.TabStop = False
         '
+        'ButtonHelp
+        '
+        Me.ButtonHelp.Location = New System.Drawing.Point(3, 551)
+        Me.ButtonHelp.Name = "ButtonHelp"
+        Me.ButtonHelp.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonHelp.TabIndex = 4
+        Me.ButtonHelp.Text = "Help"
+        Me.ButtonHelp.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -405,4 +416,5 @@ Partial Class Form1
     Friend WithEvents CheckBoxSaveExit As CheckBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents ButtonHelp As Button
 End Class
