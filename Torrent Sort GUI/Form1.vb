@@ -161,7 +161,18 @@ Public Class Form1
 
     Private Sub ButtonAddTV_Click(sender As Object, e As EventArgs) Handles ButtonAddTV.Click
 
-        Dim NewShow As String = InputBox("Enter Torrent Tag To Strip", "New Tag")
+        Dim SelectedItem As String = ""
+        Dim SelectedSplit
+
+        If Not ListBoxItems.SelectedItem Is Nothing Then
+            If InStr(ListBoxItems.SelectedItem, " S") <> 0 Then
+                SelectedSplit = Split(ListBoxItems.SelectedItem, " S")
+                ReDim Preserve SelectedSplit(UBound(SelectedSplit) - 1)
+                SelectedItem = Join(SelectedSplit, " S")
+            End If
+        End If
+
+        Dim NewShow As String = InputBox("Enter Torrent Tag To Strip", "New Tag", SelectedItem)
 
         If NewShow = "" Then
             Exit Sub
